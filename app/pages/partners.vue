@@ -18,9 +18,14 @@
                 <p class="text-sm text-dimmed">
                     Showing 4 of 4 partners
                 </p>
+
+                <div class="grid grid-cols-4 gap-4">
+                    <PartnerCard />
+                </div>
+                
                 <ListGroup>
-                    <PartnerCard
-                        v-for="(partner, index) in partnerCards"
+                    <PartnerList
+                        v-for="(partner, index) in partnerLists"
                         :key="index"
                         v-bind="partner"
                     />
@@ -30,11 +35,12 @@
     </Page>
 </template>
 <script setup lang="ts">
-import { classifications, regions, partnerCards } from '~/data'
+import { classifications, regions, partnerLists } from '~/data'
 import Page from '~/components/wrapper/Page.vue'
 import Block from '~/components/wrapper/Block.vue'
-import PartnerCard from '~/components/partners/PartnerCard.vue'
+import PartnerList from '~/components/partners/PartnerList.vue'
 import ListGroup from '~/components/wrapper/ListGroup.vue'
+import PartnerCard from '~/components/partners/PartnerCard.vue'
 const _classifications = ref('all')
 const _regions = ref('all')
 </script>

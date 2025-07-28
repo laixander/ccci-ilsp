@@ -16,7 +16,9 @@
                 <slot name="actions" />
             </div>
         </div>
-        <slot name="content" />
+        <div class="relative flex flex-col gap-4 sm:gap-6">
+            <slot name="content" />
+        </div>
     </div>
 </template>
 <script setup lang="ts">

@@ -4,7 +4,7 @@ import { navigationLinks } from './navigationLinks';
 import { statCards } from './cards';
 import { activityCards } from './cards';
 import { deadlineCards } from './cards';
-import { partnerCards } from './cards';
+import { partnerLists } from './lists';
 
 // Options
 import { classifications } from './options';
@@ -17,5 +17,5 @@ export {
     deadlineCards,
     classifications,
     regions,
-    partnerCards
+    partnerLists
 };

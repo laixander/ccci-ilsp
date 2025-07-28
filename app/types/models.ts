@@ -39,7 +39,7 @@ export interface DeadlineCardProps {
     statusVariant?: 'solid' | 'soft' | 'outline' | 'subtle'
 }
 
-export interface PartnerCardProps {
+export interface PartnerListProps {
   name: string
   icon?: string
   sector: string
