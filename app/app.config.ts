@@ -11,6 +11,11 @@ export default defineAppConfig({
                 body: 'p-3 sm:p-4',
                 footer: 'p-3 sm:p-4'
             }
+        },
+        badge: {
+            slots: {
+                base: '!rounded-full',
+            },
         }
     }
 })

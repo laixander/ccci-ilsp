@@ -42,21 +42,25 @@
             <div class="grid lg:grid-cols-2 gap-4">
                 <Block title="Recent Activities" description="Add description for recent activities">
                     <template #content>
-                        <ActivityCard
-                            v-for="(activity, index) in activityCards"
-                            :key="index"
-                            v-bind="activity"
-                        />
+                        <ListGroup>
+                            <ActivityItem
+                                v-for="(activity, index) in activityItems"
+                                :key="index"
+                                v-bind="activity"
+                            />
+                        </ListGroup>
                     </template>
                 </Block>
                 <Block title="Upcoming Deadlines" description="Add description for upcoming deadlines">
                     <template #content>
-                        <DeadlineCard
-                            v-for="(deadline, index) in deadlineCards"
-                            :key="index"
-                            v-bind="deadline"
-                            class="min-h-[80px] grid items-center"
-                        />
+                        <ListGroup>
+                            <DeadlineItem
+                                v-for="(deadline, index) in deadlineItems"
+                                :key="index"
+                                v-bind="deadline"
+                                class="min-h-[81px]"
+                            />
+                        </ListGroup>
                     </template>
                 </Block>
             </div>
@@ -65,14 +69,13 @@
 </template>
 
 <script setup lang="ts">
+import { activityItems, statCards, deadlineItems } from '~/data'
 import Page from '~/components/wrapper/Page.vue'
 import Block from '~/components/wrapper/Block.vue'
+import ListGroup from '~/components/wrapper/ListGroup.vue'
 import DonutChart from '~/components/apexchart/DonutChart.vue'
 import StackedBarChart from '~/components/apexchart/StackedBarChart.vue'
-import PieChart from '~/components/unovis/PieChart.vue'
-import BarGraph from '~/components/unovis/BarGraph.vue'
 import StatCard from '~/components/dashboard/StatCard.vue'
-import ActivityCard from '~/components/dashboard/ActivityCard.vue'
-import DeadlineCard from '~/components/dashboard/DeadlineCard.vue'
-import { activityCards, statCards, deadlineCards } from '~/data'
+import ActivityItem from '~/components/dashboard/ActivityItem.vue'
+import DeadlineItem from '~/components/dashboard/DeadlineItem.vue'
 </script>

@@ -1,7 +1,7 @@
 <template>
     <UCard>
         <div class="flex flex-row-reverse justify-between items-center mb-3 lg:mb-6">
-            <UBadge :icon="icon" :color="iconColor || 'primary'" :variant="iconVariant || 'soft'" size="lg" class="rounded-full p-3" />
+            <UBadge :icon="icon" :color="iconColor || 'primary'" :variant="iconVariant || 'soft'" size="lg" class="p-3" />
             <h4 class="font-semibold text-toned">{{ title }}</h4>
         </div>
 

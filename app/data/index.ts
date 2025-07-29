@@ -1,21 +1,28 @@
-import { navigationLinks } from './navigationLinks';
+import { navigationMenuItemsByRole } from './navigationMenuItems';
+// import { navigationLinks } from './navigationLinks';
+
+import { useUserMenuItems } from './userMenuItems';
 
 // Cards
 import { statCards } from './cards';
-import { activityCards } from './cards';
-import { deadlineCards } from './cards';
-import { partnerLists } from './lists';
+
+// Lists
+import { activityItems } from './lists';
+import { deadlineItems } from './lists';
+import { partnerItems } from './lists';
 
 // Options
 import { classifications } from './options';
 import { regions } from './options';
 
 export {
-    navigationLinks,
+    navigationMenuItemsByRole,
+    // navigationLinks,
+    useUserMenuItems,
     statCards,
-    activityCards,
-    deadlineCards,
+    activityItems,
+    deadlineItems,
     classifications,
     regions,
-    partnerLists
+    partnerItems
 };

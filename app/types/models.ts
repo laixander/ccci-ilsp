@@ -21,7 +21,7 @@ export interface StatCardProps {
     description?: string
 }
 
-export interface ActivityCardProps {
+export interface ActivityItemProps {
     title: string
     university: string
     department: string
@@ -31,7 +31,7 @@ export interface ActivityCardProps {
     statusVariant?: 'solid' | 'soft' | 'outline' | 'subtle'
 }
 
-export interface DeadlineCardProps {
+export interface DeadlineItemProps {
     title: string
     deadline: string
     status: string
@@ -39,7 +39,7 @@ export interface DeadlineCardProps {
     statusVariant?: 'solid' | 'soft' | 'outline' | 'subtle'
 }
 
-export interface PartnerListProps {
+export interface PartnerItemProps {
   name: string
   icon?: string
   sector: string

@@ -60,8 +60,8 @@
             <div class="space-y-2">
                 <p class="text-xs font-medium text-muted-foreground">Areas of Collaboration:</p>
                 <div class="flex flex-wrap gap-1">
-                    <UBadge label="Student Exchange" variant="outline" color="neutral" class="rounded-full" />
-                    <UBadge label="Research" variant="outline" color="neutral" class="rounded-full" />
+                    <UBadge label="Student Exchange" variant="outline" color="neutral" />
+                    <UBadge label="Research" variant="outline" color="neutral" />
                 </div>
             </div>
         </div>

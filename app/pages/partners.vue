@@ -24,8 +24,8 @@
                 </div>
                 
                 <ListGroup>
-                    <PartnerList
-                        v-for="(partner, index) in partnerLists"
+                    <PartnerItem
+                        v-for="(partner, index) in partnerItems"
                         :key="index"
                         v-bind="partner"
                     />
@@ -35,10 +35,10 @@
     </Page>
 </template>
 <script setup lang="ts">
-import { classifications, regions, partnerLists } from '~/data'
+import { classifications, regions, partnerItems } from '~/data'
 import Page from '~/components/wrapper/Page.vue'
 import Block from '~/components/wrapper/Block.vue'
-import PartnerList from '~/components/partners/PartnerList.vue'
+import PartnerItem from '~/components/partners/PartnerItem.vue'
 import ListGroup from '~/components/wrapper/ListGroup.vue'
 import PartnerCard from '~/components/partners/PartnerCard.vue'
 const _classifications = ref('all')

@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center space-x-4">
         <UBadge :icon="icon || 'i-lucide-building'" :color="statusColor || 'neutral'"
-            :variant="statusVariant || 'soft'" size="lg" class="rounded-full p-3" />
+            :variant="statusVariant || 'soft'" size="lg" class="p-3" />
         <div class="flex-1 min-w-0">
             <p class="text-sm font-semibold text-default truncate">{{ name }}</p>
             <div class="flex items-center *:text-sm *:text-dimmed">
@@ -26,8 +26,7 @@
                 <p class="text-xs text-dimmed truncate">Ongoing</p>
             </div>
             <div>
-                <UBadge :label="status" :variant="statusVariant || 'soft'" :color="statusColor || 'primary'"
-                    class="rounded-full" />
+                <UBadge :label="status" :variant="statusVariant || 'soft'" :color="statusColor || 'primary'" />
             </div>
         </div>
         <div class="inline-flex items-center">
@@ -37,6 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PartnerListProps } from '~/types/models'
-defineProps<PartnerListProps>()
+import type { PartnerItemProps } from '~/types/models'
+defineProps<PartnerItemProps>()
 </script>
