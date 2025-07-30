@@ -34,10 +34,10 @@
             <!-- Only show background if hasDetails -->
             <div :class="[
                 hasDetails ? 'rounded-full p-3' : '',
-                hasDetails && color === 'warning' && 'bg-warning-100',
-                hasDetails && color === 'secondary' && 'bg-secondary-100',
-                hasDetails && color === 'success' && 'bg-success-100',
-                hasDetails && color === 'error' && 'bg-error-100'
+                hasDetails && color === 'warning' && 'bg-warning/10',
+                hasDetails && color === 'secondary' && 'bg-secondary/10',
+                hasDetails && color === 'success' && 'bg-success/10',
+                hasDetails && color === 'error' && 'bg-error/10'
             ]">
                 <UIcon :name="icon" :class="[
                     'shrink-0 flex',
