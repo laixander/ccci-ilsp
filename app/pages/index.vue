@@ -8,9 +8,10 @@
         <template #content>
             <div class="grid lg:grid-cols-4 gap-4">
                 <StatCard
-                    v-for="(stat, index) in statCards"
+                    v-for="(dashboard, index) in statDashboardCards"
                     :key="index"
-                    v-bind="stat"
+                    v-bind="dashboard"
+                    hasDetails
                 />
             </div>
 
@@ -69,13 +70,12 @@
 </template>
 
 <script setup lang="ts">
-import { activityItems, statCards, deadlineItems } from '~/data'
+import { activityItems, statDashboardCards, deadlineItems } from '~/data'
 import Page from '~/components/wrapper/Page.vue'
 import Block from '~/components/wrapper/Block.vue'
 import ListGroup from '~/components/wrapper/ListGroup.vue'
 import DonutChart from '~/components/apexchart/DonutChart.vue'
 import StackedBarChart from '~/components/apexchart/StackedBarChart.vue'
-import StatCard from '~/components/dashboard/StatCard.vue'
 import ActivityItem from '~/components/dashboard/ActivityItem.vue'
 import DeadlineItem from '~/components/dashboard/DeadlineItem.vue'
 </script>

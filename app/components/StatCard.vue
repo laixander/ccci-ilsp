@@ -1,21 +1,60 @@
 <template>
     <UCard :class="[
-    'bg-gradient-to-tl from-5% to-default',
-    color === 'warning' && 'from-warning/10',
-    color === 'secondary' && 'from-secondary/10',
-    color === 'success' && 'from-success/10',
-    color === 'error' && 'from-error/10'
-  ]">
-        <div class="flex items-center justify-between">
+        useGradient && 'bg-gradient-to-tr from-5% to-default',
+        useGradient && color === 'warning' && 'from-warning/10',
+        useGradient && color === 'secondary' && 'from-secondary/10',
+        useGradient && color === 'success' && 'from-success/10',
+        useGradient && color === 'error' && 'from-error/10'
+    ]">
+        <!-- Adjust vertical alignment based on hasDetails -->
+        <div :class="['flex justify-between', hasDetails ? 'items-start' : 'items-center']">
             <div>
-                <p class="text-sm text-muted-foreground">{{ label }}</p>
-                <p class="text-2xl font-medium mt-1">{{ count }}</p>
+                <h4 :class="['text-toned', hasDetails ? 'font-semibold' : 'text-sm']">{{ label }}</h4>
+
+                <!-- Increase top margin if hasDetails -->
+                <p :class="['text-2xl text-highlighted font-bold', hasDetails ? 'mt-8' : 'mt-1']">{{ count }}</p>
+
+                <!-- Optional trend section -->
+                <div v-if="hasDetails">
+                    <div class="flex items-center space-x-1 text-xs mt-1">
+                        <UIcon :name="trendDirection === 'up' ? 'i-lucide-trending-up' : 'i-lucide-trending-down'"
+                            :class="[
+                                'size-4 shrink-0',
+                                trendDirection === 'up' ? 'text-success' : 'text-error'
+                            ]" />
+                        <span :class="trendDirection === 'up' ? 'text-success' : 'text-error'">
+                            {{ trendValue }}
+                        </span>
+                        <span class="text-muted">from last month</span>
+                    </div>
+                    <p class="text-xs text-muted">{{ trendDescription }}</p>
+                </div>
             </div>
-            <UIcon :name="icon" :class="`size-6 shrink-0 text-${color}`" />
+
+            <!-- Only show background if hasDetails -->
+            <div :class="[
+                hasDetails ? 'rounded-full p-3' : '',
+                hasDetails && color === 'warning' && 'bg-warning-100',
+                hasDetails && color === 'secondary' && 'bg-secondary-100',
+                hasDetails && color === 'success' && 'bg-success-100',
+                hasDetails && color === 'error' && 'bg-error-100'
+            ]">
+                <UIcon :name="icon" :class="[
+                    'shrink-0 flex',
+                    hasDetails ? 'size-5' : 'size-6',
+                    `text-${color}`
+                ]" />
+            </div>
         </div>
     </UCard>
 </template>
 <script setup lang="ts">
-import type { StatSmCardProps } from '~/types/models'
-defineProps<StatSmCardProps>()
+import { computed } from 'vue'
+import type { StatCardProps } from '~/types/models'
+
+const props = defineProps<StatCardProps>()
+
+const trendDirection = computed(() =>
+    props.trendValue?.startsWith('-') ? 'down' : 'up'
+)
 </script>

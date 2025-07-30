@@ -4,8 +4,7 @@ import { navigationMenuItemsByRole } from './navigationMenuItems';
 import { useUserMenuItems } from './userMenuItems';
 
 // Cards
-import { statCards } from './cards';
-import { statSmCards } from './cards';
+import { statDashboardCards, statProposalCards } from './cards';
 
 // Lists
 import { activityItems } from './lists';
@@ -20,8 +19,8 @@ export {
     navigationMenuItemsByRole,
     // navigationLinks,
     useUserMenuItems,
-    statCards,
-    statSmCards,
+    statDashboardCards,
+    statProposalCards,
     activityItems,
     deadlineItems,
     classifications,

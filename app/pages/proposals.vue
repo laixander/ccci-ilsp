@@ -7,9 +7,10 @@
         <template #content>
             <div class="grid grid-cols-4 gap-4">
                 <StatCard
-                    v-for="(statSm, index) in statSmCards"
+                    v-for="(proposal, index) in statProposalCards"
                     :key="index"
-                    v-bind="statSm"
+                    v-bind="proposal"
+                    useGradient
                 />
             </div>
             <Block>
@@ -25,5 +26,5 @@
 import Page from '~/components/wrapper/Page.vue'
 import Block from '~/components/wrapper/Block.vue'
 import ComingSoon from '~/components/ComingSoon.vue';
-import { statSmCards } from '~/data';
+import { statProposalCards } from '~/data';
 </script>
