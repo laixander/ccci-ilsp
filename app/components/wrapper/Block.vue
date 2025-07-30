@@ -1,7 +1,7 @@
 <template>
-    <UCard>
-        <div class="flex flex-col gap-4 sm:gap-6">
-            <div v-if="title" class="relative flex flex-col gap-5 lg:flex-row lg:items-center">
+    <UCard :ui="uiCardConfig">
+        <template #header>
+            <div v-if="title || description || $slots.actions" class="relative flex flex-col gap-5 lg:flex-row lg:items-center">
                 <div class="flex-1 space-y-0.5">
                     <div class="text-pretty font-semibold text-highlighted">
                         {{ title }}
@@ -14,13 +14,21 @@
                     <slot name="actions" />
                 </div>
             </div>
-            <div class="flex flex-col gap-2">
-                <slot name="content" />
-            </div>
+        </template>
+        <div v-if="$slots.content" class="flex flex-col gap-2">
+            <slot name="content" />
         </div>
     </UCard>
 </template>
 <script setup lang="ts">
 import type { BlockProps } from '~/types/models'
-defineProps<BlockProps>()
+const props = withDefaults(defineProps<BlockProps>(), {
+    showDivider: false,
+    noBodyPadding: false
+})
+
+const uiCardConfig = {
+    root: props.showDivider ? undefined : 'divide-none',
+    body: props.noBodyPadding ? 'p-0 sm:p-0' : undefined
+}
 </script>

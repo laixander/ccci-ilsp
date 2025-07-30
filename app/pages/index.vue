@@ -40,7 +40,7 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-4">
-                <Block title="Recent Activities" description="Add description for recent activities">
+                <Block title="Recent Activities" description="Add description for recent activities" noBodyPadding showDivider>
                     <template #content>
                         <ListGroup>
                             <ActivityItem
@@ -51,7 +51,7 @@
                         </ListGroup>
                     </template>
                 </Block>
-                <Block title="Upcoming Deadlines" description="Add description for upcoming deadlines">
+                <Block title="Upcoming Deadlines" description="Add description for upcoming deadlines" noBodyPadding showDivider>
                     <template #content>
                         <ListGroup>
                             <DeadlineItem

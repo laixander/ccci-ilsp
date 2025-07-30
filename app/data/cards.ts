@@ -49,3 +49,11 @@ export const statCards: StatCardProps[] = [
         description: 'MOUs expiring in 60 days',
     },
 ]
+
+import type { StatSmCardProps } from '~/types/models'
+export const statSmCards: StatSmCardProps[] = [
+  { label: 'Pending Review', count: 156, color: 'warning', icon: 'i-lucide-inbox' },
+  { label: 'Under Review', count: 89, color: 'secondary', icon: 'i-lucide-file-search' },
+  { label: 'Approved', count: 34, color: 'success', icon: 'i-lucide-thumbs-up' },
+  { label: 'Need Revision', count: 7, color: 'error', icon: 'i-lucide-circle-alert' }
+]

@@ -4,8 +4,10 @@ export interface PageProps {
 }
 
 export interface BlockProps {
-    title?: string
-    description?: string
+  title?: string
+  description?: string
+  showDivider?: boolean        // Optional: shows divider if true
+  noBodyPadding?: boolean      // Optional: removes body padding if true
 }
 
 export interface StatCardProps {
@@ -51,4 +53,11 @@ export interface PartnerItemProps {
   status: string
   statusColor?: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary'
   statusVariant?: 'solid' | 'soft' | 'outline' | 'subtle'
+}
+
+export interface StatSmCardProps {
+  label: string
+  count: number
+  color: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary'
+  icon: string
 }

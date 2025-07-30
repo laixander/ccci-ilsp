@@ -5,6 +5,7 @@ import { useUserMenuItems } from './userMenuItems';
 
 // Cards
 import { statCards } from './cards';
+import { statSmCards } from './cards';
 
 // Lists
 import { activityItems } from './lists';
@@ -20,6 +21,7 @@ export {
     // navigationLinks,
     useUserMenuItems,
     statCards,
+    statSmCards,
     activityItems,
     deadlineItems,
     classifications,
