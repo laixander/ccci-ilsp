@@ -25,7 +25,7 @@ export const navigationMenuItemsByRole: Record<string, NavigationMenuItem[]> = {
     'Administrator': [
         [
             { label: 'MAIN NAVIGATION', type: 'label' },
-            { label: 'Dashboard', icon: 'i-lucide-pie-chart', to: '/' },
+            { label: 'Dashboard', icon: 'i-lucide-pie-chart', to: '/dashboard' },
             { label: 'Notifications', icon: 'i-lucide-bell' },
             { label: 'Settings', icon: 'i-lucide-settings' }
         ]
