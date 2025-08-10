@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
+    modules: ['@nuxt/ui', '@nuxtjs/color-mode', '@nuxt/fonts'],
     app: {
         head: {
             title: 'ILSP Application',
@@ -19,11 +20,26 @@ export default defineNuxtConfig({
         }
     },
     css: ['~/assets/css/main.css'],
-    modules: ['@nuxt/ui', '@nuxtjs/color-mode', '@nuxt/fonts'],
     fonts: {
-    defaults: {
-      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      styles: ['normal', 'italic'],
+        defaults: {
+            weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+            styles: ['normal', 'italic'],
+        },
     },
-  }
+    ui: {
+        theme: {
+            colors: [
+                'primary',
+                'secondary',
+                'success',
+                'info',
+                'warning',
+                'error',
+                'neutral',
+                'violet',
+                'orange',
+                'purple'
+            ]
+        }
+    }
 })

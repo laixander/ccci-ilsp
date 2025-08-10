@@ -18,7 +18,7 @@ const items = ref<NavigationMenuItem[]>([
 ])
 </script>
 <template>
-    <div class="border-t dark:border-gray-800 border-gray-100 shadow-sm">
+    <div class="border-t border-gray-100 dark:border-gray-600/30">
         <UContainer>
             <UNavigationMenu :items="items">
             </UNavigationMenu>

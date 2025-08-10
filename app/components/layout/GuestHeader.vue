@@ -48,20 +48,20 @@ const items: NavigationMenuItem[] = [
 ]
 </script>
 <template>
-    <div class="border-b dark:border-gray-800 border-gray-100 shadow-sm">
+    <div class="border-b border-gray-100 dark:border-gray-600/30">
         <UContainer>
             <UNavigationMenu :items="items">
                 <template #item-label="{item}">
                     <div class="text-left" v-if="item.isBrand">
-                        <div class="font-bold">
+                        <div class="font-extrabold text-toned text-lg">
                             {{ item.label }}
-                        </div class="text-xs">
-                        <div>{{ item.value }}</div>
+                        </div>
+                        <div class="font-light text-dimmed text-xs">{{ item.value }}</div>
                     </div>
                     <div v-else-if="item.isColorMode" >
                          <FeatureColorModeButton />
                     </div>
-                    <UButton v-else :variant="item.buttonVariant" :color="item.buttonColor">
+                    <UButton v-else :variant="item.buttonVariant" :color="item.buttonColor" size="lg">
                         {{ item.label }}
                     </UButton>
                 </template>

@@ -1,17 +1,49 @@
-import { navigationMenuItemsByRole } from './navigationMenuItems';
-import { customTitles } from './pageTitle';
+import {
+    navigationMenuItemsByRole
+} from './navigationMenuItems';
+
+import {
+    customTitles
+} from './pageTitle';
+
+// Cards
+import {
+    statDashboardCards,
+    statProposalCards,
+    proposals,
+} from './cards';
+
+
+// Lists
+import {
+    activityItems,
+    deadlineItems
+} from './lists';
 
 // Options
-import { classifications } from './options';
-import { regions } from './options';
-import { institutions } from './options';
-import { durations } from './options';
-
-export {
-    navigationMenuItemsByRole,
-    customTitles,
+import {
     classifications,
     regions,
     institutions,
     durations
+} from './options';
+
+// Actions
+import {
+    quickActions
+} from './actions';
+
+export {
+    navigationMenuItemsByRole,
+    customTitles,
+    statDashboardCards,
+    statProposalCards,
+    activityItems,
+    deadlineItems,
+    classifications,
+    regions,
+    institutions,
+    durations,
+    quickActions,
+    proposals
 };

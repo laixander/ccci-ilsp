@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
-import Page from '~/components/global/Page.vue'
-import Block from '~/components/global/Block.vue'
 import StepInstitution from '~/components/feature/RegistrationStepInstitution.vue'
 import StepContact from '~/components/feature/RegistrationStepContact.vue'
 import StepCollaboration from '~/components/feature/RegistrationStepCollaboration.vue'

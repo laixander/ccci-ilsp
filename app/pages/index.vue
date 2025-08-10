@@ -6,17 +6,20 @@ definePageMeta({
 const features = useConstantFeatures()
 </script>
 <template>
-    <UContainer class="py-16 space-y-[200px]">
-        <div class="text-center space-y-8">
-            <UBadge variant="subtle" size="lg" class="px-4 rounded-full">
-                International Linkages & Student Partnerships
-            </UBadge>
-            <h1 class="text-8xl font-bold">
-                Empowering Global <span class="text-primary">Academic Partnerships</span>
-            </h1>
-            <p class="font-extralight text-2xl text-muted leading-10">
-                Streamline international collaborations, manage MOUs, track activities, and foster meaningful partnerships between CBSUA and institutions worldwide.
-            </p>
+    <UContainer class="py-16">
+        <div class="min-h-[calc(100vh-70px)] space-y-24 text-center flex flex-col items-center">
+            
+            <div class="space-y-4 pt-24">
+                <UBadge variant="subtle" size="lg" class="px-4 rounded-full">
+                    International Linkages & Student Partnerships
+                </UBadge>
+                <h1 class="text-8xl/24 font-bold">
+                    Empowering Global <span class="text-primary">Academic Partnerships</span>
+                </h1>
+                <p class="font-extralight text-2xl text-muted leading-10">
+                    Streamline international collaborations, manage MOUs, track activities, and foster meaningful partnerships between CBSUA and institutions worldwide.
+                </p>
+            </div>
             <div class="flex justify-center gap-4">
                 <UButton label="Get Started" size="lg" class="text-lg px-8 py-4 rounded-xl" trailing-icon="i-lucide-arrow-right" />
                 <UButton label="Learn More" size="lg" class="text-lg px-8 py-4 rounded-xl" color="neutral" />
@@ -27,7 +30,7 @@ const features = useConstantFeatures()
                 <h2 class=" font-sans text-3xl font-bold">
                     Comprehensive Partner Management
                 </h2>
-                <div class="font-light text-muted text-xl">
+                <div class="font-light text-muted text-lg">
                     Everything you need to manage international linkages and partnerships in one integrated platform.
                 </div>
             </div>
