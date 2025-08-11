@@ -56,7 +56,7 @@ function handleClick() {
             </div>
 
             <!-- Badges -->
-            <div v-if="showDetails" class="flex gap-2">
+            <div class="flex gap-2">
                 <UBadge :label="source" :color="sourceColor" variant="soft" />
                 <UBadge :label="priority" :color="priorityColor" variant="soft" />
             </div>
