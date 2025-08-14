@@ -71,3 +71,25 @@ export const deadlineItems: DeadlineItemProps[] = [
         statusVariant: 'soft',
     }
 ]
+
+import type { ListIconProps } from '~/types/models'
+export const contactDetails: ListIconProps[] = [
+    { icon: 'i-lucide-building', label: 'MIT Technology Institute' },
+    { icon: 'i-lucide-mail', label: 'hiroshi.tanaka@mit.edu' },
+    { icon: 'i-lucide-phone', label: '+1-617-253-1000' },
+    { icon: 'i-lucide-calendar', label: 'Submitted: 2025-01-25' }
+]
+export const objectives: ListIconProps[] = [
+    { label: 'Develop AI-powered crop monitoring systems' },
+    { label: 'Create predictive models for agricultural yield optimization' },
+    { label: 'Implement smart irrigation and fertilization systems' },
+    { label: 'Establish joint research publications and patents' },
+    { label: 'Train graduate students through exchange programs' }
+]
+export const scopes: ListIconProps[] = [
+    { label: 'Joint research papers in top-tier journals' },
+    { label: 'Prototype AI agricultural monitoring system' },
+    { label: 'Patent applications for innovative technologies' },
+    { label: 'Capacity building for CBSUA faculty and students' },
+    { label: 'Technology transfer to local farming communities' }
+]

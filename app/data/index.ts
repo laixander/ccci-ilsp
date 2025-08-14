@@ -17,7 +17,10 @@ import {
 // Lists
 import {
     activityItems,
-    deadlineItems
+    deadlineItems,
+    contactDetails,
+    objectives,
+    scopes,
 } from './lists';
 
 // Options
@@ -45,5 +48,8 @@ export {
     institutions,
     durations,
     quickActions,
-    proposals
+    proposals,
+    contactDetails,
+    objectives,
+    scopes,
 };

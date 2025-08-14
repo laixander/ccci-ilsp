@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { TabsItem } from '@nuxt/ui'
+import ProposalDetailOverview from '~/components/feature/ProposalDetailOverview.vue'
 
 const items = [
     {
@@ -19,12 +20,27 @@ const items = [
     }
 ] satisfies TabsItem[]
 
-const contactDetails = [
-    { icon: 'i-lucide-building', label: 'MIT Technology Institute' },
-    { icon: 'i-lucide-mail', label: 'hiroshi.tanaka@mit.edu' },
-    { icon: 'i-lucide-phone', label: '+1-617-253-1000' },
-    { icon: 'i-lucide-calendar', label: 'Submitted: 2025-01-25' }
-]
+// Local values
+const proposal = {
+    name: 'AI Research Collaboration Initiative',
+    institute: 'MIT Technology Institute',
+    type: 'Research Partnership',
+    departments: 3,
+    duration: '3yrs',
+    budget: '₱500K',
+    status: {
+        label: 'pending',
+        color: 'secondary' as 'secondary'
+    },
+    source: {
+        label: 'external',
+        color: 'primary' as 'primary'
+    },
+    priority: {
+        label: 'high',
+        color: 'error' as 'error'
+    }
+}
 
 const uiCardConfig = {
     body: 'flex items-center gap-4'
@@ -40,37 +56,36 @@ const uiCardConfig = {
             </div>
             <UCard :ui="uiCardConfig">
                 <div class="w-full">
-                    <div class="text-2xl font-bold">AI Research Collaboration Initiative</div>
+                    <div class="text-2xl font-bold">{{ proposal.name }}</div>
                     <div class="flex items-center gap-2 *:text-sm *:text-muted">
                         <UIcon name="i-lucide-building" />
-                        <span>MIT Technology Institute</span>
+                        <span>{{ proposal.institute }}</span>
                     </div>
                     <div class="flex items-center gap-2 mt-4">
-                        <UBadge label="pending" color="secondary" variant="soft" />
-                        <UBadge label="external" color="primary" variant="soft" />
-                        <UBadge label="high" color="error" variant="soft" />
-                        <div class="text-sm text-dimmed">Type: <span class="font-medium text-toned">Research
-                                Partnership</span></div>
+                        <UBadge :label="proposal.status.label" :color="proposal.status.color" variant="soft" />
+                        <UBadge :label="proposal.source.label" :color="proposal.source.color" variant="soft" />
+                        <UBadge :label="proposal.priority.label" :color="proposal.priority.color" variant="soft" />
+                        <div class="text-sm text-dimmed">Type: <span class="font-medium text-toned">{{ proposal.type }}</span></div>
                     </div>
                     <!-- Additional proposal details can be added here -->
                 </div>
                 <div class="flex gap-3">
-                    <UAlert color="info" variant="subtle" class="min-w-[150px]">
+                    <UAlert color="info" variant="subtle" class="min-w-[136px]">
                         <template #description>
-                            <div class="text-2xl font-bold">3</div>
-                            <div class="mt-1">Departments</div>
+                            <div class="mb-1">Departments</div>
+                            <div class="text-2xl font-bold">{{ proposal.departments }}</div>
                         </template>
                     </UAlert>
-                    <UAlert color="success" variant="subtle" class="min-w-[150px]">
+                    <UAlert color="success" variant="subtle" class="min-w-[136px]">
                         <template #description>
-                            <div class="text-2xl font-bold">3yrs</div>
-                            <div class="mt-1">Duration</div>
+                            <div class="mb-1">Duration</div>
+                            <div class="text-2xl font-bold">{{ proposal.duration }}</div>
                         </template>
                     </UAlert>
-                    <UAlert color="orange" variant="subtle" class="min-w-[150px]">
+                    <UAlert color="orange" variant="subtle" class="min-w-[136px]">
                         <template #description>
-                            <div class="text-2xl font-bold">₱500K</div>
-                            <div class="mt-1">Budget</div>
+                            <div class="mb-1">Budget</div>
+                            <div class="text-2xl font-bold">{{ proposal.budget }}</div>
                         </template>
                     </UAlert>
                 </div>
@@ -78,26 +93,7 @@ const uiCardConfig = {
 
             <UTabs :items="items" :ui="{ trigger: 'grow' }" color="neutral" class="gap-4 w-full">
                 <template #overview>
-                    <div class="flex gap-4">
-                        <UCard class="flex-1">
-                            Tab 1
-                        </UCard>
-                        <div class="min-w-[450px] space-y-4">
-                            <Block title="Contact Information" noBodyPadding>
-                                <div class="space-y-4 px-3 pb-3 sm:px-4 sm:pb-4">
-                                    <ListProfile />
-                                    <div class="space-y-2">
-                                        <ListIcon v-for="(item, index) in contactDetails" :key="index" v-bind="item" />
-                                    </div>
-                                    <UButton label="Visit Website" icon="i-lucide-external-link" variant="soft"
-                                        color="neutral" size="lg" block class="justify-center" />
-                                </div>
-                            </Block>
-                            <Block title="Departments Involved">
-                                Tab 1
-                            </Block>
-                        </div>
-                    </div>
+                    <ProposalDetailOverview />
                 </template>
                 <template #attachments>
                     <UCard>
