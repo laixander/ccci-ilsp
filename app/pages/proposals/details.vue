@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { TabsItem } from '@nuxt/ui'
-import ProposalDetailOverview from '~/components/feature/ProposalDetailOverview.vue'
+import ProposalDetailsOverview from '~/components/feature/ProposalDetailsOverview.vue'
+import ProposalDetailsAttachments from '~/components/feature/ProposalDetailsAttachments.vue'
+import ProposalDetailsReview from '~/components/feature/ProposalDetailsReview.vue'
 
 const items = [
     {
@@ -93,17 +95,13 @@ const uiCardConfig = {
 
             <UTabs :items="items" :ui="{ trigger: 'grow' }" color="neutral" class="gap-4 w-full">
                 <template #overview>
-                    <ProposalDetailOverview />
+                    <ProposalDetailsOverview />
                 </template>
                 <template #attachments>
-                    <UCard>
-                        Tab 2
-                    </UCard>
+                    <ProposalDetailsAttachments />
                 </template>
                 <template #review>
-                    <UCard>
-                        Tab 3
-                    </UCard>
+                    <ProposalDetailsReview />
                 </template>
             </UTabs>
         </UContainer>

@@ -93,3 +93,31 @@ export const scopes: ListIconProps[] = [
     { label: 'Capacity building for CBSUA faculty and students' },
     { label: 'Technology transfer to local farming communities' }
 ]
+
+export const attachments = [
+    {
+        name: 'AI_Research_Proposal.pdf',
+        size: '2.4 MB',
+        date: '2023-01-15'
+    },
+    {
+        name: 'Budget_Estimate.xlsx',
+        size: '1.2 MB',
+        date: '2023-01-16'
+    },
+    {
+        name: 'Collaboration_Agreement.docx',
+        size: '500 KB',
+        date: '2023-01-17'
+    },
+    {
+        name: 'Project_Timeline.pptx',
+        size: '3.1 MB',
+        date: '2023-01-18'
+    },
+    {
+        name: 'Research_Data_Analysis.pdf',
+        size: '4.5 MB',
+        date: '2023-01-19'
+    }
+]

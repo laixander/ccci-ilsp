@@ -21,6 +21,7 @@ import {
     contactDetails,
     objectives,
     scopes,
+    attachments
 } from './lists';
 
 // Options
@@ -52,4 +53,5 @@ export {
     contactDetails,
     objectives,
     scopes,
+    attachments
 };

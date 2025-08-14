@@ -8,7 +8,7 @@ defineProps<ListProfileProps>()
             <UAvatar v-if="profilePhoto" :src="profilePhoto" :alt="profileName" size="xl" />
         </slot>
         <div>
-            <div v-if="$slots.profileName || profileName" class="font-bold text-default">
+            <div v-if="$slots.profileName || profileName" class="font-semibold text-highlighted">
                 <slot name="profileName">
                     {{ profileName }}
                 </slot>

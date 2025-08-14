@@ -86,7 +86,9 @@ export type ProposalBoardType = {
 
 export interface ListIconProps {
   icon?: string
+  styledIcon?: boolean
   label: string
+  description?: string
   withContainer?: boolean
   iconColor?: string
 }

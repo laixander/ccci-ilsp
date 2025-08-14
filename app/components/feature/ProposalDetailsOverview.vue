@@ -4,7 +4,7 @@ import { contactDetails, objectives, scopes } from '~/data'
 <template>
     <div class="flex gap-4">
         <UCard class="flex-1">
-            <div class="text-default font-semibold mb-2">
+            <div class="text-highlighted font-semibold mb-2">
                 Proposal Description
             </div>
             <div class="text-sm text-muted text-pretty leading-relaxed">
@@ -15,7 +15,7 @@ import { contactDetails, objectives, scopes } from '~/data'
             </div>
 
             <div class="space-y-4 mt-4">
-                <div class="text-sm text-default font-semibold">Objectives</div>
+                <div class="text-sm text-highlighted font-semibold">Objectives</div>
                 <div class="space-y-2">
                     <ListIcon v-for="(item, index) in objectives" :key="index" v-bind="item" icon="i-lucide-target"
                         iconColor="text-secondary" withContainer />
@@ -23,14 +23,14 @@ import { contactDetails, objectives, scopes } from '~/data'
             </div>
 
             <div class="space-y-4 mt-4">
-                <div class="text-sm text-default font-semibold">Scope of Collaboration</div>
+                <div class="text-sm text-highlighted font-semibold">Scope of Collaboration</div>
                 <div class="space-y-2">
                     <ListIcon v-for="(item, index) in scopes" :key="index" v-bind="item"
                         icon="i-lucide-circle-check-big" iconColor="text-success" withContainer />
                 </div>
             </div>
         </UCard>
-        <div class="max-w-[450px] space-y-4">
+        <div class="w-full max-w-[450px] space-y-4">
             <Block title="Contact Information" noBodyPadding>
                 <div class="space-y-4 px-3 pb-3 sm:px-4 sm:pb-4">
                     <ListProfile profilePhoto="https://i.pravatar.cc/40" profileName="Dr. Hiroshi Tanaka"
@@ -42,9 +42,8 @@ import { contactDetails, objectives, scopes } from '~/data'
                         size="lg" block class="justify-center" />
                 </div>
             </Block>
-            <Block title="Departments Involved">
-                <div class="flex flex-wrap gap-2">
-
+            <Block title="Departments Involved" noBodyPadding>
+                <div class="flex flex-wrap gap-2 px-4 pb-4">
                     <UBadge label="College of Engineering" color="neutral" variant="soft" />
                     <UBadge label="College of Computer Studies" color="neutral" variant="soft" />
                     <UBadge label="College of Agriculture" color="neutral" variant="soft" />
