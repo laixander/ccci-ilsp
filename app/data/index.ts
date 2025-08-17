@@ -10,7 +10,9 @@ import {
 import {
     statDashboardCards,
     statProposalCards,
+    statWorkflowCards,
     proposals,
+    workflows
 } from './cards';
 
 
@@ -29,7 +31,8 @@ import {
     classifications,
     regions,
     institutions,
-    durations
+    durations,
+    priorities
 } from './options';
 
 // Actions
@@ -53,5 +56,8 @@ export {
     contactDetails,
     objectives,
     scopes,
-    attachments
+    attachments,
+    statWorkflowCards,
+    priorities,
+    workflows
 };

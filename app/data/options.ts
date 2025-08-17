@@ -31,3 +31,10 @@ export const durations = [
     { label: '5 Years', value: '5' },
     { label: 'Ongoing', value: 'ongoing' }
 ]
+
+export const priorities = [
+    { label: 'All Priorities', value: 'all' },
+    { label: 'High', value: 'high' },
+    { label: 'Medium', value: 'medium' },
+    { label: 'Low', value: 'low' }
+]

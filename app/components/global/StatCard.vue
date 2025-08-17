@@ -57,8 +57,10 @@ const trendDirection = computed(() =>
                 color === 'warning' && 'bg-warning/10',
                 color === 'secondary' && 'bg-secondary/10',
                 color === 'success' && 'bg-success/10',
+                color === 'info' && 'bg-info/10',
                 color === 'error' && 'bg-error/10',
-                color === 'purple' && 'bg-purple/10'
+                color === 'purple' && 'bg-purple/10',
+                color === 'pink' && 'bg-pink/10'
             ]">
                 <!-- <UIcon :name="icon" :class="[
                     'shrink-0 flex',

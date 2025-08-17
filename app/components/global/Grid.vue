@@ -33,14 +33,17 @@ const gridClass = computed(() => {
   if (props.sm === 2) classList.push('sm:grid-cols-2')
   if (props.sm === 3) classList.push('sm:grid-cols-3')
   if (props.sm === 4) classList.push('sm:grid-cols-4')
+  if (props.sm === 5) classList.push('sm:grid-cols-5')
 
   if (props.md === 2) classList.push('md:grid-cols-2')
   if (props.md === 3) classList.push('md:grid-cols-3')
   if (props.md === 4) classList.push('md:grid-cols-4')
+  if (props.md === 5) classList.push('md:grid-cols-5')
 
   if (props.lg === 2) classList.push('lg:grid-cols-2')
   if (props.lg === 3) classList.push('lg:grid-cols-3')
   if (props.lg === 4) classList.push('lg:grid-cols-4')
+  if (props.lg === 5) classList.push('lg:grid-cols-5')
 
   if (props.xl === 2) classList.push('xl:grid-cols-2')
   if (props.xl === 3) classList.push('xl:grid-cols-3')

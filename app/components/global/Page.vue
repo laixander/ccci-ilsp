@@ -4,8 +4,12 @@ defineProps<PageProps>()
 </script>
 <template>
     <div v-if="$slots.toolbar"
-        class="shrink-0 flex items-center justify-between border-b border-default px-4 sm:px-6 gap-1.5 overflow-x-auto min-h-[50px]">
-        <slot name="toolbar" />
+        :class="[
+            'shrink-0 flex items-center justify-between border-b border-default py-2.5 px-4 sm:px-6 gap-2 overflow-x-auto',
+            toolbarClass
+        ]"
+    >
+    <slot name="toolbar" />
     </div>
     <div class="flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 overflow-y-auto">
         <div v-if="title || description || $slots.actions"

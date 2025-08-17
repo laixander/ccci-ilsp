@@ -1,7 +1,37 @@
+export const colors = [
+  'primary',
+  'secondary',
+  'success',
+  'info',
+  'warning',
+  'error',
+  'neutral',
+  'red',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'green',
+  'emerald',
+  'teal',
+  'cyan',
+  'sky',
+  'blue',
+  'indigo',
+  'violet',
+  'purple',
+  'fuchsia',
+  'pink',
+  'rose'
+] as const
+
+export type ColorType = typeof colors[number]
+
 export interface PageProps {
     title?: string
     description?: string
     alignCenter?: boolean
+    toolbarClass?: string
 }
 
 export interface BlockProps {
@@ -22,7 +52,7 @@ export interface StepperLayoutProps {
 export interface StatCardProps {
     label: string
     count: number
-    color: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary' | 'purple' | 'orange'
+    color: ColorType
     icon: string
     hasDetails?: boolean
     trendValue?: string           // e.g. "2%" or "-4%"
@@ -36,7 +66,7 @@ export interface ActivityItemProps {
     department: string
     timeAgo: string
     status: string
-    statusColor?: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary'
+    statusColor?: ColorType
     statusVariant?: 'solid' | 'soft' | 'outline' | 'subtle'
 }
 
@@ -44,14 +74,14 @@ export interface DeadlineItemProps {
     title: string
     deadline: string
     status: string
-    statusColor?: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary'
+    statusColor?: ColorType
     statusVariant?: 'solid' | 'soft' | 'outline' | 'subtle'
 }
 
 export interface BoardProps {
     title: string
     badgeLabel?: string | number
-    badgeColor?: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary' | 'orange' | 'purple'
+    badgeColor?: ColorType
 }
 
 export type ProposalCardSource = 'external' | 'internal'
@@ -80,17 +110,17 @@ export type ProposalCardType = {
 export type ProposalBoardType = {
     title: string
     badgeLabel: number
-    badgeColor: 'primary' | 'success' | 'warning' | 'error' | 'neutral' | 'secondary' | 'orange' | 'purple'
+    badgeColor: ColorType
     cards: ProposalCardType[]
 }
 
 export interface ListIconProps {
-  icon?: string
-  styledIcon?: boolean
-  label: string
-  description?: string
-  withContainer?: boolean
-  iconColor?: string
+    icon?: string
+    styledIcon?: boolean
+    label: string
+    description?: string
+    withContainer?: boolean
+    iconColor?: string
 }
 
 export interface ListProfileProps {

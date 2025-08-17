@@ -62,6 +62,39 @@ export const statProposalCards: StatCardProps[] = [
     }
 ]
 
+export const statWorkflowCards: StatCardProps[] = [
+    {
+        label: 'Drafting',
+        count: 3,
+        color: 'secondary',
+        icon: 'i-lucide-file-pen'
+    },
+    {
+        label: 'Internal Review',
+        count: 2,
+        color: 'warning',
+        icon: 'i-lucide-file-search'
+    },
+    {
+        label: 'Partner Review',
+        count: 2,
+        color: 'pink',
+        icon: 'i-lucide-file-user'
+    },
+    {
+        label: 'Legal Review',
+        count: 1,
+        color: 'info',
+        icon: 'i-lucide-file-badge'
+    },
+    {
+        label: 'Final Approval',
+        count: 1,
+        color: 'success',
+        icon: 'i-lucide-circle-check-big'
+    }
+]
+
 import type { ProposalBoardType } from '~/types/models'
 
 export const proposals: ProposalBoardType[] = [
@@ -171,6 +204,30 @@ export const proposals: ProposalBoardType[] = [
         priority: 'high',
         timeSubmitted: '2025-01-28, 09:55 AM'
       }
+    ]
+  }
+]
+
+export const workflows: ProposalBoardType[] = [
+  {
+    title: 'Drafting',
+    badgeLabel: 3,
+    badgeColor: 'secondary',
+    cards: [
+    ]
+  },
+  {
+    title: 'Under Review',
+    badgeLabel: 2,
+    badgeColor: 'warning',
+    cards: [
+    ]
+  },
+  {
+    title: 'Final Approval',
+    badgeLabel: 2,
+    badgeColor: 'success',
+    cards: [
     ]
   }
 ]
