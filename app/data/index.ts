@@ -12,9 +12,9 @@ import {
     statProposalCards,
     statWorkflowCards,
     proposals,
-    workflows
+    workflows,
+    partners
 } from './cards';
-
 
 // Lists
 import {
@@ -23,6 +23,8 @@ import {
     contactDetails,
     objectives,
     scopes,
+    institutionResponsibilities,
+    partnerResponsibilities,
     attachments
 } from './lists';
 
@@ -32,13 +34,18 @@ import {
     regions,
     institutions,
     durations,
-    priorities
+    priorities,
 } from './options';
 
 // Actions
 import {
     quickActions
 } from './actions';
+
+// form
+import {
+    defaultMous
+} from './form';
 
 export {
     navigationMenuItemsByRole,
@@ -59,5 +66,9 @@ export {
     attachments,
     statWorkflowCards,
     priorities,
-    workflows
+    workflows,
+    institutionResponsibilities,
+    partnerResponsibilities,
+    defaultMous,
+    partners
 };

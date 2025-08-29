@@ -44,3 +44,9 @@ export const timelineItems: TimelineItem[] = [
     authorColor: 'warning'
   }
 ]
+
+export const typeDetails = [
+    { label: 'Research Partnership', value: 'research' },
+    { label: 'Consulting Agreement', value: 'consulting' },
+    { label: 'Joint Venture', value: 'joint-venture' }
+]

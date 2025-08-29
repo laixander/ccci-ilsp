@@ -96,7 +96,6 @@ export const statWorkflowCards: StatCardProps[] = [
 ]
 
 import type { ProposalBoardType } from '~/types/models'
-
 export const proposals: ProposalBoardType[] = [
   {
     title: 'Pending',
@@ -208,12 +207,40 @@ export const proposals: ProposalBoardType[] = [
   }
 ]
 
-export const workflows: ProposalBoardType[] = [
+import type { WorkflowBoardType } from '~/types/models'
+export const workflows: WorkflowBoardType[] = [
   {
     title: 'Drafting',
     badgeLabel: 3,
     badgeColor: 'secondary',
     cards: [
+      {
+        title: 'AI Research Collaboration Initiative',
+        institution: 'MIT Technology Institute',
+        contact: 'Dr. Sarah Johnson',
+        priority: 'high',
+        dueDate: 'Feb 10',
+        alert: 'Next: Awaiting department approval',
+        timeSubmitted: '2025-02-01, 10:15 AM'
+      },
+      {
+        title: 'Renewable Energy Solutions Pitch',
+        institution: 'Green Future Corp.',
+        contact: 'Alex Tan',
+        priority: 'medium',
+        dueDate: 'Feb 10',
+        alert: 'Next: Awaiting department approval',
+        timeSubmitted: '2025-02-02, 09:42 AM'
+      },
+      {
+        title: 'Smart City Infrastructure Plan',
+        institution: 'UrbanTech Alliance',
+        contact: 'Maria Gomez',
+        priority: 'low',
+        dueDate: 'Feb 10',
+        alert: 'Next: Awaiting department approval',
+        timeSubmitted: '2025-02-03, 04:27 PM'
+      }
     ]
   },
   {
@@ -221,6 +248,28 @@ export const workflows: ProposalBoardType[] = [
     badgeLabel: 2,
     badgeColor: 'warning',
     cards: [
+      {
+        title: 'Marine Conservation Research',
+        institution: 'Oceanic Institute',
+        contact: 'Prof. Liam Chen',
+        progress: 25,
+        reviewer: 'Internal',
+        priority: 'high',
+        dueDate: 'Feb 10',
+        alert: 'Next: Awaiting department approval',
+        timeSubmitted: '2025-01-29, 02:00 PM'
+      },
+      {
+        title: 'Blockchain for Supply Chain',
+        institution: 'TechSphere Ltd.',
+        contact: 'Olivia Reyes',
+        progress: 50,
+        reviewer: 'Partner',
+        priority: 'medium',
+        dueDate: 'Feb 10',
+        alert: 'Next: Awaiting department approval',
+        timeSubmitted: '2025-02-01, 05:18 PM'
+      }
     ]
   },
   {
@@ -228,6 +277,39 @@ export const workflows: ProposalBoardType[] = [
     badgeLabel: 2,
     badgeColor: 'success',
     cards: [
+      {
+        title: 'Waste-to-Energy Facility Plan',
+        institution: 'EcoGen Industries',
+        contact: 'Christopher Lee',
+        priority: 'high',
+        dueDate: 'Feb 10',
+        alert: 'Next: Awaiting department approval',
+        timeSubmitted: '2025-01-28, 09:55 AM'
+      }
     ]
   }
+]
+
+
+
+export const partners = [
+    {
+        id: 1,
+        icon: 'i-lucide-building',
+        title: 'Tokyo Institute of Technology',
+        subtitle: 'Japan',
+        description: 'Tokyo Institute of Technology, a leading technological university in Japan...',
+        tags: ['Research', 'Environment', 'Partnership'],
+        highlights: { mous: 3, projects: 8 }
+    },
+    {
+        id: 2,
+        icon: 'i-lucide-university',
+        title: 'Kyoto University',
+        subtitle: 'Japan',
+        description: 'Kyoto University is famous for its research excellence...',
+        tags: ['Education', 'Innovation'],
+        highlights: { mous: 5, projects: 10 }
+    },
+    // ...add more
 ]

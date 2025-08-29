@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { classifications, regions, statProposalCards, proposals } from '~/data'
-import ProposalCard from '~/components/feature/ProposalCard.vue';
 
 const search = ref('')
 const _classifications = ref('all')
@@ -32,7 +31,7 @@ const handleNavigation = () => {
             <Board v-for="(board, bIndex) in proposals" :key="bIndex" :title="board.title"
                 :badge-label="board.badgeLabel" :badge-color="board.badgeColor">
                 <template #default="{ showDetails }">
-                    <ProposalCard v-for="(card, cIndex) in board.cards" :key="cIndex" :board-color="board.badgeColor"
+                    <BoardCard v-for="(card, cIndex) in board.cards" :key="cIndex" :board-color="board.badgeColor"
                         v-bind="card" :show-details="showDetails" @navigate="handleNavigation" />
                 </template>
             </Board>

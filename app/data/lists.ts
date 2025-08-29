@@ -93,6 +93,16 @@ export const scopes: ListIconProps[] = [
     { label: 'Capacity building for CBSUA faculty and students' },
     { label: 'Technology transfer to local farming communities' }
 ]
+export const institutionResponsibilities: ListIconProps[] = [
+    { label: 'Provide access to agricultural research facilities' },
+    { label: 'Assign qualified faculty members to joint projects' },
+    { label: 'Facilitate student exchange programs' }
+]
+export const partnerResponsibilities: ListIconProps[] = [
+    { label: 'Provide AI and machine learning expertise' },
+    { label: 'Share relevant research data and methodologies' },
+    { label: 'Host CBSUA faculty and students for research visits' }
+]
 
 export const attachments = [
     {
