@@ -38,3 +38,19 @@ export const priorities = [
     { label: 'Medium', value: 'medium' },
     { label: 'Low', value: 'low' }
 ]
+
+export const types = [
+    { label: 'All Types', value: 'all' },
+    { label: 'Bilateral', value: 'bilateral' },
+    { label: 'Multilateral', value: 'multilateral' },
+    { label: 'Specific', value: 'specific' }
+]
+
+export const status = [
+    { label: 'All Status', value: 'all' },
+    { label: 'Active', value: 'active' },
+    { label: 'Under Review', value: 'review' },
+    { label: 'Signed', value: 'signed' },
+    { label: 'Expired', value: 'expired' },
+    { label: 'Draft', value: 'draft' }
+]

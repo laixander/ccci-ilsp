@@ -1,98 +1,98 @@
 import type { StatCardProps } from '~/types/models'
 
 export const statDashboardCards: StatCardProps[] = [
-    {
-        icon: 'i-lucide-users',
-        color: 'success',
-        label: 'Total Partners',
-        count: 156,
-        trendValue: '+12%',
-        trendDescription: 'Active institutional partnerships',
-    },
-    {
-        icon: 'i-lucide-file-text',
-        color: 'secondary',
-        label: 'Active MOUs',
-        count: 89,
-        trendValue: '+5%',
-        trendDescription: 'Currently valid agreements',
-    },
-    {
-        icon: 'i-lucide-folder-open',
-        color: 'warning',
-        label: 'Ongoing Activities',
-        count: 34,
-        trendValue: '-8%',
-        trendDescription: 'Projects in progress',
-    },
-    {
-        icon: 'i-lucide-info',
-        color: 'error',
-        label: 'Expiring Soon',
-        count: 7,
-        trendValue: '-2%',
-        trendDescription: 'MOUs expiring in 60 days',
-    },
+  {
+    icon: 'i-lucide-users',
+    color: 'success',
+    label: 'Total Partners',
+    count: 156,
+    trendValue: '+12%',
+    trendDescription: 'Active institutional partnerships',
+  },
+  {
+    icon: 'i-lucide-file-text',
+    color: 'secondary',
+    label: 'Active MOUs',
+    count: 89,
+    trendValue: '+5%',
+    trendDescription: 'Currently valid agreements',
+  },
+  {
+    icon: 'i-lucide-folder-open',
+    color: 'warning',
+    label: 'Ongoing Activities',
+    count: 34,
+    trendValue: '-8%',
+    trendDescription: 'Projects in progress',
+  },
+  {
+    icon: 'i-lucide-info',
+    color: 'error',
+    label: 'Expiring Soon',
+    count: 7,
+    trendValue: '-2%',
+    trendDescription: 'MOUs expiring in 60 days',
+  },
 ]
 
 export const statProposalCards: StatCardProps[] = [
-    {
-        label: 'Pending Review',
-        count: 3,
-        color: 'secondary',
-        icon: 'i-lucide-inbox'
-    },
-    {
-        label: 'Under Review',
-        count: 2,
-        color: 'warning',
-        icon: 'i-lucide-scan-text'
-    },
-    {
-        label: 'Approved',
-        count: 2,
-        color: 'success',
-        icon: 'i-lucide-thumbs-up'
-    },
-    {
-        label: 'Need Revision',
-        count: 1,
-        color: 'error',
-        icon: 'i-lucide-circle-alert'
-    }
+  {
+    label: 'Pending Review',
+    count: 3,
+    color: 'secondary',
+    icon: 'i-lucide-inbox'
+  },
+  {
+    label: 'Under Review',
+    count: 2,
+    color: 'warning',
+    icon: 'i-lucide-scan-text'
+  },
+  {
+    label: 'Approved',
+    count: 2,
+    color: 'success',
+    icon: 'i-lucide-thumbs-up'
+  },
+  {
+    label: 'Need Revision',
+    count: 1,
+    color: 'error',
+    icon: 'i-lucide-circle-alert'
+  }
 ]
 
 export const statWorkflowCards: StatCardProps[] = [
-    {
-        label: 'Drafting',
-        count: 3,
-        color: 'secondary',
-        icon: 'i-lucide-file-pen'
-    },
-    {
-        label: 'Internal Review',
-        count: 2,
-        color: 'warning',
-        icon: 'i-lucide-file-search'
-    },
-    {
-        label: 'Partner Review',
-        count: 2,
-        color: 'pink',
-        icon: 'i-lucide-file-user'
-    },
-    {
-        label: 'Legal Review',
-        count: 1,
-        color: 'info',
-        icon: 'i-lucide-file-badge'
-    },
-    {
-        label: 'Final Approval',
-        count: 1,
-        color: 'success',
-        icon: 'i-lucide-circle-check-big'
-    }
+  {
+    label: 'Drafting',
+    count: 3,
+    color: 'secondary',
+    icon: 'i-lucide-file-pen'
+  },
+  {
+    label: 'Internal Review',
+    count: 2,
+    color: 'warning',
+    icon: 'i-lucide-file-search'
+  },
+  {
+    label: 'Partner Review',
+    count: 2,
+    color: 'pink',
+    icon: 'i-lucide-file-user'
+  },
+  {
+    label: 'Legal Review',
+    count: 1,
+    color: 'info',
+    icon: 'i-lucide-file-badge'
+  },
+  {
+    label: 'Final Approval',
+    count: 1,
+    color: 'success',
+    icon: 'i-lucide-circle-check-big'
+  }
 ]
 
 import type { ProposalBoardType } from '~/types/models'
@@ -293,23 +293,65 @@ export const workflows: WorkflowBoardType[] = [
 
 
 export const partners = [
-    {
-        id: 1,
-        icon: 'i-lucide-building',
-        title: 'Tokyo Institute of Technology',
-        subtitle: 'Japan',
-        description: 'Tokyo Institute of Technology, a leading technological university in Japan...',
-        tags: ['Research', 'Environment', 'Partnership'],
-        highlights: { mous: 3, projects: 8 }
-    },
-    {
-        id: 2,
-        icon: 'i-lucide-university',
-        title: 'Kyoto University',
-        subtitle: 'Japan',
-        description: 'Kyoto University is famous for its research excellence...',
-        tags: ['Education', 'Innovation'],
-        highlights: { mous: 5, projects: 10 }
-    },
-    // ...add more
-]
+  {
+    id: 1,
+    icon: 'i-lucide-building',
+    title: 'Tokyo Institute of Technology',
+    type: { label: 'government', color: 'amber' as 'amber' },
+    subtitle: 'Japan',
+    description: 'Tokyo Institute of Technology, a leading technological university in Japan...',
+    tags: ['Research', 'Environment', 'Partnership'],
+    highlights: { mous: 3, projects: 8 },
+  },
+  {
+    id: 2,
+    icon: 'i-lucide-university',
+    title: 'Kyoto University',
+    type: { label: 'university', color: 'indigo' as 'indigo' },
+    subtitle: 'Japan',
+    description: 'Kyoto University is famous for its research excellence...',
+    tags: ['Education', 'Innovation'],
+    highlights: { mous: 5, projects: 10 },
+  },
+  {
+    id: 3,
+    icon: 'i-lucide-graduation-cap',
+    title: 'University of Tokyo',
+    type: { label: 'university', color: 'indigo' as 'indigo' },
+    subtitle: 'Japan',
+    description:
+      'The University of Tokyo is Japan’s first imperial university and consistently ranks among the world’s top institutions.',
+    tags: ['Global', 'Innovation', 'AI'],
+    highlights: { mous: 7, projects: 12 },
+  },
+  {
+    id: 4,
+    icon: 'i-lucide-globe',
+    title: 'Osaka University',
+    type: { label: 'university', color: 'indigo' as 'indigo' },
+    subtitle: 'Japan',
+    description: 'Osaka University is recognized for its strong focus on interdisciplinary studies and industry collaboration.',
+    tags: ['Health', 'Technology'],
+    highlights: { mous: 4, projects: 6 },
+  },
+  {
+    id: 5,
+    icon: 'i-lucide-flask-conical',
+    title: 'Nagoya University',
+    type: { label: 'university', color: 'indigo' as 'indigo' },
+    subtitle: 'Japan',
+    description: 'Nagoya University is home to multiple Nobel laureates and is known for its pioneering scientific research.',
+    tags: ['Research', 'Nobel Prize'],
+    highlights: { mous: 6, projects: 9 },
+  },
+  {
+    id: 6,
+    icon: 'i-lucide-atom',
+    title: 'Hokkaido University',
+    type: { label: 'university', color: 'indigo' as 'indigo' },
+    subtitle: 'Japan',
+    description: 'Hokkaido University is one of the oldest, most comprehensive universities in Japan, with strengths in agriculture and environment.',
+    tags: ['Sustainability', 'Agriculture'],
+    highlights: { mous: 2, projects: 5 },
+  },
+];

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { classifications, regions, partners } from '~/data'
-const _classifications = ref('all')
-const _regions = ref('all')
+import { status, types, partners } from '~/data'
+const _status = ref('all')
+const _types = ref('all')
 const search = ref('')
 const handleSearch = (value: string) => {
     console.log('Search triggered with:', value)
@@ -12,19 +12,21 @@ const handleNavigation = () => {
 }
 </script>
 <template>
-    <Page title="Partner Management" description="Manage institutional partnerships and collaborations">
+    <Page title="MOU Repository" description="Manage memorandums of understanding and partnership agreements">
         <template #actions>
-            <UButton label="Add Partner" icon="i-lucide-plus" size="lg" />
+            <UButton label="Upload MOU" icon="i-lucide-upload" size="lg" color="neutral" variant="outline" />
+            <UButton label="Create MOU" icon="i-lucide-file-text" size="lg" />
         </template>
-        <SearchBar v-model:search="search" placeholder="Search Partners..." @search="handleSearch">
-            <USelect v-model="_classifications" :items="classifications" class="lg:w-44" />
-            <USelect v-model="_regions" :items="regions" class="lg:w-44" />
+        <SearchBar v-model:search="search" placeholder="Search MOUs..." @search="handleSearch">
+            <USelect v-model="_status" :items="status" class="lg:w-44" />
+            <USelect v-model="_types" :items="types" class="lg:w-44" />
         </SearchBar>
-        <Grid :lg="3" :gap="4">
+        
+        <Grid :lg="2" :gap="4">
 
             <!-- loop -->
             <Card v-for="card in partners" :key="card.id" :icon="card.icon" :title="card.title"
-                :description="card.description" :tags="card.tags" :type="card.type"
+                :description="card.description" :tags="card.tags" 
                 :actions="[
                     { label: 'View', icon: 'i-lucide-eye', onSelect: () => handleNavigation() },
                     { label: 'Edit', icon: 'i-lucide-pencil', onSelect(){ console.log('Click Edit for', card.title) } },
@@ -33,8 +35,8 @@ const handleNavigation = () => {
             >
                 <!-- subtitle slot -->
                 <template #subtitle>
-                    <div class="flex items-center gap-2 text-muted">
-                        <UIcon name="i-lucide-map-pin" class="size-4 shrink-0" />
+                    <div class="flex items-center gap-1 text-muted">
+                        <UIcon name="i-lucide-map-pin" class="size-3 shrink-0" />
                         <span class="text-sm">{{ card.subtitle }}</span>
                     </div>
                 </template>

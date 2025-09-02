@@ -45,6 +45,25 @@ export const timelineItems: TimelineItem[] = [
   }
 ]
 
+export const partnerActivities: TimelineItem[] = [
+  {
+    date: 'Jan 21, 2023',
+    title: 'Student exchange program initiated',
+  },
+  {
+    date: 'Jan 20, 2023',
+    title: 'Joint research proposal submitted',
+  },
+  {
+    date: 'Jan 19, 2023',
+    title: 'MOU renewal completed',
+  },
+  {
+    date: 'Jan 18, 2023',
+    title: 'Faculty visit concluded',
+  }
+]
+
 export const typeDetails = [
     { label: 'Research Partnership', value: 'research' },
     { label: 'Consulting Agreement', value: 'consulting' },

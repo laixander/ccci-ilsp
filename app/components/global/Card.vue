@@ -7,12 +7,17 @@ withDefaults(defineProps<CardProps>(), {
 </script>
 
 <template>
-    <UCard>
+    <UCard class="relative">
+        <!-- Card Ink -->
+        <!-- <div class="absolute w-[6px] h-full bg-gray-400 top-0 left-0"></div> -->
         <!-- Header -->
         <div class="flex items-center gap-3">
             <UAvatar :icon="icon" size="2xl" />
             <div class="flex-1">
-                <div class="text-highlighted font-semibold line-clamp-1">{{ title }}</div>
+                <div class="flex items-start gap-2">
+                    <div class="text-highlighted font-semibold line-clamp-1">{{ title }}</div>
+                    <UBadge v-if="type" :label="type.label" :color="type.color" variant="subtle" />
+                </div>
                 <slot name="subtitle">
                     <div v-if="subtitle" class="text-sm text-muted">
                         {{ subtitle }}

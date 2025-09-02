@@ -79,6 +79,12 @@ export const contactDetails: ListIconProps[] = [
     { icon: 'i-lucide-phone', label: '+1-617-253-1000' },
     { icon: 'i-lucide-calendar', label: 'Submitted: 2025-01-25' }
 ]
+export const partnerContactDetails: ListIconProps[] = [
+    { icon: 'i-lucide-mail', label: 'hiroshi.tanaka@mit.edu' },
+    { icon: 'i-lucide-phone', label: '+1-617-253-1000' },
+    { icon: 'i-lucide-user-check', label: 'Partner since 2018' }
+]
+
 export const objectives: ListIconProps[] = [
     { label: 'Develop AI-powered crop monitoring systems' },
     { label: 'Create predictive models for agricultural yield optimization' },

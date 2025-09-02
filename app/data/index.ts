@@ -25,7 +25,8 @@ import {
     scopes,
     institutionResponsibilities,
     partnerResponsibilities,
-    attachments
+    attachments,
+    partnerContactDetails
 } from './lists';
 
 // Options
@@ -35,6 +36,8 @@ import {
     institutions,
     durations,
     priorities,
+    types,
+    status
 } from './options';
 
 // Actions
@@ -70,5 +73,8 @@ export {
     institutionResponsibilities,
     partnerResponsibilities,
     defaultMous,
-    partners
+    partners,
+    partnerContactDetails,
+    types,
+    status
 };

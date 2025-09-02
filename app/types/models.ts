@@ -145,10 +145,16 @@ export type WorkflowBoardType = {
     cards: BoardCardType[]
 }
 
+export interface CardType {
+  label: string
+  color?: ColorType
+}
+
 import type { DropdownMenuItem } from '@nuxt/ui'
 export type CardLayoutSection = 'description' | 'highlights' | 'tags'
 export interface CardProps {
     title: string
+    type?: CardType
     subtitle?: string
     description?: string
     tags?: string[]
